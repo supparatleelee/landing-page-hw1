@@ -1,0 +1,479 @@
+html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(255, 255, 255, 0.764);
+    text-align: center;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    width: 50vw;
+    
+}
+.logo h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.logo h2 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+nav li {
+    list-style: none;
+}
+.login {
+    color: rgb(49, 127, 129);
+}
+.login-text {
+    position: relative;
+    bottom: 8px;
+    padding-left: 8px;
+}
+nav a.active {
+    color: rgb(49, 127, 129);
+}
+nav a:hover:not(.active) {
+    color: rgb(49, 127, 129);
+    transition: 0.3s;
+}
+
+/* Main Section */
+main {
+    position: relative;
+    top: 15vh;
+}
+/* Main - Chat Feature */
+.chat {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    margin-right: 20px;
+    background-color: black;
+    padding: 18px 50px;
+}
+.chat i {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 5px;
+}
+.chat a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+/* Main - Title Section */
+.title {
+    height: 912px;
+    /* Background img is not limited only on this section, but all the page -> change it later */
+    background-image: url(./img/background-img.jpg);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    /* nah, oject-fit is for i.e. img element, not for background */
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.title-text {
+    display: inline-block;
+    width: 70%;
+    margin-top: 6%;
+}
+.title-text h1 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.title-text .success {
+    font-size: 120px;
+    letter-spacing: 20px;
+    font-weight: bolder;
+}
+.title-text p {
+    font-size: 24px;
+    font-weight: 300;
+}
+.title-text .button1 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 25px;
+    border: 2px solid black;
+    margin-top: 50px;
+    font-weight: 300;
+}
+
+.title-text .button1:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+/* Main - About Me Section */
+.about-me {
+    height: 100vh;
+    background-color: white;
+    display: flex;
+}
+.about-me .left-box {
+    /* background-color: salmon; */
+    margin-left: 10%;
+    margin-right: 20px;
+    width: 40%;
+    padding: 0 100px;
+}
+.about-me .left-box .line1 {
+    margin-top: 70px;
+    width: 40px;
+    border: 1px solid black;
+}
+.about-me .left-box h1 {
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.about-me .left-box p {
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.about-me .left-box p:first-of-type {
+    margin-top: 50px;
+}
+.about-me .left-box p:last-of-type {
+    margin-top: 35px;
+}
+.about-me .left-box .button2 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 25px;
+    border: 2px solid black;
+    margin-top: 50px;
+    font-weight: 300;
+}
+
+.about-me .left-box .button2:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+.about-me .pic-box {
+    width: 700px;
+    position: relative;
+    right: 0;
+    background-image: url(./img/person.jpg);
+}
+/* Main - Services Section */
+.services {
+    display: flex;
+    /* padding-top: 70px; */
+    height: 100vh;
+    background-image: url(./img/background-img1.jpg);
+}
+.service-box {
+    width: 70%;
+    margin: 0 auto;
+}
+.services .service-box .line2 {
+    position: relative;
+    margin-top: 70px;
+    /* Why its parent 'services' div margin-top as well???? */
+    /* https://stackoverflow.com/questions/1762539/margin-on-child-element-moves-parent-element */
+    /* https://stackoverflow.com/questions/17137262/why-does-the-child-divs-margin-affect-the-margin-of-the-parent */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing */
+    /* = Margin Collapse Topic */
+    width: 40px;
+    border: 1px solid black;
+}
+.services .service-box h1 {
+    margin-top: 50px;
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+/* Main - Service Section -> Boxes */
+.services .service-box .boxes {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    gap: 40px;
+    text-align: center;
+}
+.services .service-box .boxes > div {
+    border: 8px solid black;
+    height: 400px;
+}
+.services .service-box .boxes > div a {
+    text-decoration: none;
+    color: black;
+}
+.services .service-box .boxes > div h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 22px;
+    margin-top: 35px;
+}
+.services .service-box .boxes > div p {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 12px;
+    padding: 0 40px;
+}
+.services .service-box .boxes > div hr {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+.services .service-box .boxes > div a[class^="book-it"] {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 40px;
+    border: 2px solid black;
+    margin-top: 25px;
+    font-weight: 300;
+}
+.services .service-box .boxes > div a[class^="book-it"]:hover {
+    opacity: 0.7;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+.services .service-box .boxes > div a[class="book-it1"] {
+    margin-top: 80px;
+}
+.services .service-box .boxes > div a[class="book-it2"] {
+    margin-top: 80px;
+}
+/* Main - Service Section -> The Button */
+.services .service-box .the-button {
+    text-align: center;
+}
+.services .service-box .the-button .button3 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 25px;
+    border: 2px solid black;
+    margin-top: 50px;
+    font-weight: 300;
+}
+.services .service-box .the-button .button3:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+/* Main for services.html */
+.services-page-main {
+    height: 100vh;
+    background-image: url(./img/background-img1.jpg);
+    display: flex;
+}
+.services-page-main .service-box hr {
+    margin-top: 70px;
+    width: 40px;
+    border: 1px solid black;
+}
+.services-page-main .service-box h1 {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-top: 30px;
+}
+.services-page-main .service-box .types {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.services-page-main .service-box a[class^="type"] {
+    color: black;
+    width: 200px;
+    text-decoration: none;
+    font-weight: 300;
+    margin-top: 40px;
+    padding: 20px 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.services-page-main .service-box .boxes {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    gap: 40px;
+    text-align: center;
+}
+.services-page-main .service-box .boxes > div {
+    background-color: white;
+    height: 400px;
+}
+.services-page-main .service-box .boxes > div a {
+    text-decoration: none;
+    color: black;
+}
+.services-page-main .service-box .boxes > div h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 22px;
+    margin-top: 35px;
+}
+.services-page-main .service-box .boxes > div p {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 12px;
+    padding: 0 40px;
+}
+.services-page-main .service-box .boxes > div a[class^="book-it"] {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 40px;
+    border: 2px solid black;
+    margin-top: 25px;
+    font-weight: 300;
+}
+.services-page-main .service-box .boxes > div a[class^="book-it"]:hover {
+    opacity: 0.7;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+.services-page-main .service-box .boxes > div a[class="book-it1"] {
+    margin-top: 80px;
+}
+.services-page-main .service-box .boxes > div a[class="book-it2"] {
+    margin-top: 80px;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgb(88, 187, 192);
+    position: relative;
+    top: 15vh;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    padding: 50px 200px 0;
+}
+/* Footer -> Left-block */
+.contact {
+    height: 70%;
+    width: 55%;
+}
+.contact .line3 {
+    position: relative;
+    width: 40px;
+    border: 1px solid black;
+}
+.contact h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 900;
+    margin-top: 14px;
+}
+.contact p:first-of-type {
+    margin-top: 50px;
+}
+.contact p {
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.contact .social-media-icons {
+    margin-top: 35px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.contact .social-media-icons a {
+    color: black;
+}
+.contact .social-media-icons i {
+    margin-right: 20px;
+}
+.contact .copy {
+    margin-top: 70px;
+    margin-left: 10px;
+}
+/* Footer -> Form Section */
+footer .form {
+    width: 55%;
+}
+footer form label {
+    font-size: 18px;
+    font-weight: 300;
+}
+form textarea {
+    resize: none;
+}
+footer form input[type="text"], input[type="email"], textarea {
+    background-color: rgb(88, 187, 192);
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 20px;
+}
+footer form input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+    /* border: 2.5px solid black; */
+    outline: 1px solid black;
+    /* margin-bottom: 9px; */
+}
+form input[type="submit"] {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 50px;
+    border: 2px solid black;
+    margin-top: 4px;
+    font-size: 16px;
+    margin-left: 70.5%;
+}
+form input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition: 0.3s;
+}
